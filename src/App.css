@@ -31,3 +31,13 @@ button {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+@media(min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

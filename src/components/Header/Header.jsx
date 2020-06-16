@@ -4,9 +4,14 @@ import { FiMenu, FiShoppingCart } from 'react-icons/fi';
 import './Header.css';
 
 import Menu from '../Menu/Menu';
+import Search from '../Search/Search';
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [off, setOff] = useState({
+    name: 'Free shipping', 
+    condition: 'on orders over $50',
+  });
 
   const handleMenu = () => {
     setMenu(!menu);
@@ -32,16 +37,32 @@ const Header = () => {
           <h2 className="header__logo__subtitle">fine potions since 1026</h2>
         </div>
 
-        <button className="header__button header__button--cart">
-          <FiShoppingCart />
-          <span className="header__cart-counter">0</span>
-        </button>
+        <div className="search-field">
+          <Search />
+        </div>
+
+        
+        <div className="header__cart">
+          <div className="header__off header__off--desktop">
+            <p className="off__description">
+              {off.name}
+              <span className="off__condition">
+                {off.condition}
+              </span>
+            </p>
+          </div>
+
+          <button className="header__button header__button--cart">
+            <FiShoppingCart />
+            <span className="header__cart-counter">0</span>
+          </button>
+        </div>
 
       </div>
 
-      <div className="header__off">
-        <p className="header__off-description">
-          Free shipping on orders over $50
+      <div className="header__off header__off--mobile">
+        <p className="off__description">
+          {`${off.name} ${off.condition}`}
         </p>
       </div>
     

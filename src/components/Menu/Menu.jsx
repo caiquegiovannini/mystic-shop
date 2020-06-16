@@ -1,7 +1,9 @@
 import React from 'react';
-import { FiX, FiSearch } from 'react-icons/fi';
+import { FiX } from 'react-icons/fi';
 
 import './Menu.css';
+
+import Search from '../Search/Search';
 
 const Menu = ({ close }) => {
   return (
@@ -15,16 +17,7 @@ const Menu = ({ close }) => {
           <FiX />
         </button>
 
-        <div className="menu__search">
-          <button className="header__button header__button--search">
-            <FiSearch />
-          </button>
-          <input 
-            type="text"
-            className="menu__search-input"
-            placeholder="Search our stock"
-          />
-        </div>
+        <Search />
       </header>
 
       <nav className="menu__categories">
