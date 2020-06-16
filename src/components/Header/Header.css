@@ -15,7 +15,7 @@
 .header__logo__title {
   color: var(--secondary-color);
   font-family: 'Oswald', sans-serif;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   text-transform: uppercase;
   line-height: 1.8rem;
 }
@@ -28,7 +28,7 @@
   background-color: #fff;
   color: var(--primary-color);
   font-weight: normal;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .header__button {
@@ -40,6 +40,11 @@
 
 .header__button--cart {
   position: relative;
+}
+
+.header__button--search {
+  color: var(--secondary-color);
+  font-size: 1rem;
 }
 
 .header__cart-counter {
@@ -67,4 +72,18 @@
 .header__off-description {
   text-align: center; 
   font-size: 1.2rem;
+}
+
+@media(min-width: 425px) {
+  .header__logo__title {
+    font-size: 2.2rem;
+  }
+  
+  .header__logo__subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width: 768px) {
+
 }

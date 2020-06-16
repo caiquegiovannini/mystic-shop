@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiMenu, FiShoppingCart } from 'react-icons/fi';
 
 import './Header.css';
 
+import Menu from '../Menu/Menu';
+
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+
+  const handleMenu = () => {
+    setMenu(!menu);
+  }
+
   return (
     <header className="header">
       <div className="header__controls container">
 
-        <button className="header__button header__button--menu">
+        <button
+          className="header__button header__button--menu"
+          onClick={handleMenu}
+        >
           <FiMenu />
         </button>
 
@@ -33,6 +44,8 @@ const Header = () => {
           Free shipping on orders over $50
         </p>
       </div>
+    
+      {menu && <Menu close={handleMenu} />}
     </header>
   );
 }
