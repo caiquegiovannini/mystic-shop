@@ -28,6 +28,14 @@ const Footer = () => {
         </div>
       </section>
     
+      <section className="footer__useful">
+        <a className="useful__link" href="#">Company</a>
+        <a className="useful__link" href="#">Contact us</a>
+        <a className="useful__link" href="#">Shipping</a>
+        <a className="useful__link" href="#">Returns</a>
+        <a className="useful__link" href="#">Careers</a>
+      </section>
+      
       <section className="footer__social">
         <a className="social__link" href="#">
           <FaFacebookSquare />
@@ -46,7 +54,7 @@ const Footer = () => {
         </a>
       </section>
 
-      <section className="footer__copyright container">
+      <section className="footer__copyright">
         <p className="copyright__text">
           © 2020 Merlin's Potions. All Rights Reserved
         </p>
