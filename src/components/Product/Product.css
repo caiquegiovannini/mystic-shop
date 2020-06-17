@@ -1,0 +1,20 @@
+.product__image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 12rem;
+}
+
+.product__info {
+  display: flex;
+  justify-content: center;
+}
+
+.product__name {
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+}
+
+.product__price {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}

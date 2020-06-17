@@ -17,7 +17,7 @@
   font-family: 'Oswald', sans-serif;
   font-size: 1.9rem;
   text-transform: uppercase;
-  line-height: 1.8rem;
+  line-height: 2.5rem;
 }
 
 .header__logo__title--normal {
@@ -27,7 +27,7 @@
 .header__logo__subtitle {
   background-color: #fff;
   color: var(--primary-color);
-  font-weight: normal;
+  font-weight: 500;
   font-size: 1rem;
 }
 
@@ -77,7 +77,10 @@
 
 .off__description {
   text-align: center; 
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  padding: 0.2rem 0;
 }
 
 .header__off--desktop {
@@ -118,7 +121,8 @@
 
   .off__description {
     text-align: left;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
+    padding: 0;
     color: var(--secondary-color);
   }
   

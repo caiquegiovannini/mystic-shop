@@ -66,7 +66,7 @@ const Header = () => {
         </p>
       </div>
     
-      {menu && <Menu close={handleMenu} />}
+      <Menu close={handleMenu} active={menu ? 'active' : ''}/>
     </header>
   );
 }

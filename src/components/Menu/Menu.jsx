@@ -5,9 +5,9 @@ import './Menu.css';
 
 import Search from '../Search/Search';
 
-const Menu = ({ close }) => {
+const Menu = ({ close, active }) => {
   return (
-    <section className="menu">
+    <section className={`menu ${active}`}>
       
       <header className="menu__header container">
         <button 
@@ -21,7 +21,7 @@ const Menu = ({ close }) => {
       </header>
 
       <nav className="menu__categories">
-        <ul>
+        <ul className="menu__list">
           <li className="menu__item">
             <a className="menu__link" href="#">Potions</a>
           </li>
@@ -42,7 +42,6 @@ const Menu = ({ close }) => {
           </li>
         </ul>
       </nav>
-
     
       <footer className="menu__footer">
         <a className="footer__link" href="#">Sign In</a>
