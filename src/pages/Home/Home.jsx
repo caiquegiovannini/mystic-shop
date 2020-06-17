@@ -5,6 +5,7 @@ import './Home.css';
 
 import Header from '../../components/Header/Header';
 import Catalog from '../../components/Catalog/Catalog';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -20,6 +21,8 @@ const Home = () => {
       <Header />
 
       <Catalog title={'Potions'} products={products}/>
+
+      <Footer />
     </>
   );
 }

@@ -1,10 +1,11 @@
 import React from 'react';
+import { urlImage } from '../../services/api';
 
 import './Product.css';
 
 const Product = ({ product }) => {
   const image = {
-    backgroundImage: `url(https://raw.githubusercontent.com/enext-wpp/challenges/master/challenge-one/src/assets/images/products/${product.image})`,
+    backgroundImage: `url(${urlImage}${product.image})`,
   }
 
   return (
