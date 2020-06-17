@@ -15,6 +15,19 @@
 }
 
 .product__price {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--secondary-color);
+}
+
+@media(min-width: 768px) {
+  .product__image {
+    background-size: 14rem;
+    background-position: center;
+    height: 15rem;
+  }
+
+  .product__price {
+    font-size: 0.9rem;
+  }
 }
