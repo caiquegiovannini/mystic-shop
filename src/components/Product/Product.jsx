@@ -3,14 +3,14 @@ import { urlImage } from '../../services/api';
 
 import './Product.css';
 
-const Product = ({ product }) => {
-  const image = {
+const Product = ({ product, handleClick }) => {
+  const bgImage = {
     backgroundImage: `url(${urlImage}${product.image})`,
   }
 
   return (
-    <article className="product">
-      <figure className="product__image" style={image} />
+    <article className="product" onClick={() => handleClick(product, bgImage)}>
+      <figure className="product__image" style={bgImage} />
         
       <div className="product__info">
         <h3 className="product__name">{`${product.name} - `}</h3>

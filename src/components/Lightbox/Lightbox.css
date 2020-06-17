@@ -1,0 +1,126 @@
+.lightbox {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.lightbox__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 80%;
+  height: 80%;
+  margin: 4em auto;
+  padding: 1rem 1.5rem;
+}
+
+.lightbox__image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 35%;
+}
+
+.lightbox__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__name {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.info__field {
+  margin: 0.2rem 0;
+}
+
+.info__subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.info__description {
+  font-size: 0.8rem;
+}
+
+.info__description--price {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.info__ingredient {
+  line-height: 1.4rem;
+}
+
+.info__separation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lightbox__button {
+  position: absolute;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.lightbox__button:hover {
+  background-color: #c7361c;
+}
+
+.lightbox__close {
+  position: absolute;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+@media(min-width: 768px) {
+  .lightbox__content {
+    flex-direction: row;
+  }
+
+  .lightbox__image {
+    background-position: left;
+    width: 70%;
+    height: 100%;
+  }
+
+  .lightbox__info {
+    margin: auto 0;
+    align-items: left;
+  }
+
+  .info__name {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .info__field {
+    padding: 0.5rem 0;
+  }
+
+  .info__subtitle,
+  .info__description {
+    font-size: 1rem;
+  }
+
+  .info__separation {
+    flex-direction: column;
+  }
+
+  .lightbox__button {
+    position: initial;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -6,7 +6,7 @@ import './Header.css';
 import Menu from '../Menu/Menu';
 import Search from '../Search/Search';
 
-const Header = () => {
+const Header = ({ cartQuantity }) => {
   const [menu, setMenu] = useState(false);
   const [off, setOff] = useState({
     name: 'Free shipping', 
@@ -54,7 +54,7 @@ const Header = () => {
 
           <button className="header__button header__button--cart">
             <FiShoppingCart />
-            <span className="header__cart-counter">0</span>
+            <span className="header__cart-counter">{cartQuantity}</span>
           </button>
         </div>
 

@@ -8,13 +8,19 @@
 .catalog__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5rem 3rem;
+  gap: 5rem 2rem;
   margin-top: 3rem;
 }
 
 @media(min-width: 768px) {
   .catalog__cards {
     grid-template-columns: repeat(3, 1fr);
+    gap: 5rem 8rem;
+  }
+}
+
+@media(min-width: 768px) {
+  .catalog__cards {
     gap: 5rem 10rem;
   }
 }

@@ -1,7 +1,13 @@
+.product {
+  cursor: pointer;
+}
+
 .product__image {
   background-size: contain;
   background-repeat: no-repeat;
-  height: 12rem;
+  background-position: center;
+  width: 10rem;
+  height: 10rem;
 }
 
 .product__info {
@@ -10,12 +16,12 @@
 }
 
 .product__name {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   margin-right: 0.2rem;
 }
 
 .product__price {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--secondary-color);
 }
@@ -24,7 +30,12 @@
   .product__image {
     background-size: 14rem;
     background-position: center;
+    width: 12rem;
     height: 15rem;
+  }
+
+  .product__name {
+    font-size: 1rem;
   }
 
   .product__price {
