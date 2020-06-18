@@ -24,7 +24,7 @@ This project was built with the following specifications:
 
 - HTML written in the most semantic way possible;
 - responsive and good looking layout;
-- use of npm dependency manager;
+- use of `yarn` dependency manager;
 - BEM CSS methodology;
 - React framework;
 - consuming fake potions.json API data;

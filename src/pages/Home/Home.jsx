@@ -18,7 +18,7 @@ const Home = () => {
 
         dispatch(getProducts(productsArray))
       });
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
