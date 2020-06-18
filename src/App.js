@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -11,7 +12,9 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <Home />
+        <BrowserRouter>
+          <Route path="/" component={Home} exact/>
+        </BrowserRouter>
       </div>
     </Provider>
   );

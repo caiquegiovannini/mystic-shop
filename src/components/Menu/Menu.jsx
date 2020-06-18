@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import './Menu.css';
 
@@ -23,30 +24,30 @@ const Menu = ({ close, active }) => {
       <nav className="menu__categories">
         <ul className="menu__list">
           <li className="menu__item">
-            <a className="menu__link" href="#">Potions</a>
+            <Link to="/" className="menu__link">Potions</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="#">Ingredients</a>
+            <Link to="/" className="menu__link">Ingredients</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="#">Books</a>
+            <Link to="/" className="menu__link">Books</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="#">Supplies</a>
+            <Link to="/" className="menu__link">Supplies</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="#">Charms</a>
+            <Link to="/" className="menu__link">Charms</Link>
           </li>
           <li className="menu__item">
-            <a className="menu__link" href="#">Clearance!</a>
+            <Link to="/" className="menu__link">Clearance!</Link>
           </li>
         </ul>
       </nav>
     
       <footer className="menu__footer">
-        <a className="footer__link" href="#">Sign In</a>
+        <Link to="/" className="footer__link" href="#">Sign In</Link>
         <p> or </p>
-        <a className="footer__link" href="#">Sign Up</a>
+        <Link to="/" className="footer__link" href="#">Sign Up</Link>
       </footer>
 
     </section>

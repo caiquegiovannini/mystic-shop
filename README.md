@@ -11,12 +11,12 @@
 - [Redux](https://redux.js.org/)
 
 ## :arrow_forward: Getting Started
-You need the following tools installed in order to run this project: [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en/).
+You need the following tools installed in order to run this project: [Git](https://git-scm.com/) and [Yarn](https://yarnpkg.com/).
 
 1. Clone this repository by running: <br> `git clone https://github.com/caiquegiovannini/mystic-shop.git`;
 2. Enter the folder running through the terminal: <br> `cd mystic-shop`;
-3. Run `npm install` to install the project dependencies;
-4. Run `npm start` to start the development server;
+3. Run `yarn install` to install the project dependencies;
+4. Run `yarn start` to start the development server;
 5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## :bookmark_tabs: Specifications
