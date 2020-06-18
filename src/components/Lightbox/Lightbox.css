@@ -16,6 +16,18 @@
   height: 80%;
   margin: 4em auto;
   padding: 1rem 1.5rem;
+  animation: popUp 350ms ease-out;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(100%);
+    opacity: 1;
+  }
 }
 
 .lightbox__image {

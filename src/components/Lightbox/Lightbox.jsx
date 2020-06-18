@@ -10,12 +10,13 @@ const Lightbox = () => {
   const dispatch = useDispatch();
   const { lightboxProduct } = useSelector(state => state.lightbox);
 
-  const handleAddToCart = product => {
-    dispatch(addItem(product));
-  }
-
   const handleCloseLightbox = () => {
     dispatch(closeLightbox());
+  }
+
+  const handleAddToCart = product => {
+    dispatch(addItem(product));
+    handleCloseLightbox();
   }
 
   const ingredientsList = ingredients => {
