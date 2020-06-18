@@ -1,15 +1,27 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { urlImage } from '../../services/api';
+import { selectProduct } from '../../actions/lightbox';
 
 import './Product.css';
 
-const Product = ({ product, handleClick }) => {
+const Product = ({ product }) => {
+  const dispatch = useDispatch();
   const bgImage = {
     backgroundImage: `url(${urlImage}${product.image})`,
   }
 
+  const handleSelectProduct = (product, bgImage) => {
+    const newProduct = {
+      ...product,
+      bgImage,
+    }
+
+    dispatch(selectProduct(newProduct));
+  }
+
   return (
-    <article className="product" onClick={() => handleClick(product, bgImage)}>
+    <article className="product" onClick={() => handleSelectProduct(product, bgImage)}>
       <figure className="product__image" style={bgImage} />
         
       <div className="product__info">

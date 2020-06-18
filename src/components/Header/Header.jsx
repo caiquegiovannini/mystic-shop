@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { FiMenu, FiShoppingCart } from 'react-icons/fi';
 
 import './Header.css';
@@ -6,7 +7,8 @@ import './Header.css';
 import Menu from '../Menu/Menu';
 import Search from '../Search/Search';
 
-const Header = ({ cartQuantity }) => {
+const Header = () => {
+  const { items } = useSelector(state => state.cart);
   const [menu, setMenu] = useState(false);
   const [off, setOff] = useState({
     name: 'Free shipping', 
@@ -54,7 +56,7 @@ const Header = ({ cartQuantity }) => {
 
           <button className="header__button header__button--cart">
             <FiShoppingCart />
-            <span className="header__cart-counter">{cartQuantity}</span>
+            <span className="header__cart-counter">{items.length}</span>
           </button>
         </div>
 

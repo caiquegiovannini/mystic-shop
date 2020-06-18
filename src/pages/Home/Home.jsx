@@ -1,29 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { api } from '../../services/api';
+import { getProducts } from '../../actions/products';
 
 import Header from '../../components/Header/Header';
 import Catalog from '../../components/Catalog/Catalog';
 import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [cartQuantity, setCartQuantity] = useState(0);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(api)
       .then(res => res.json())
-      .then(data => setProducts(Object.values(data.potions)));
-  }, []);
+      .then(data => {
+        const productsArray = Object.values(data.potions);
 
-  const handleIncreaseCartQuantity = () => {
-    setCartQuantity(cartQuantity + 1)
-  }
+        dispatch(getProducts(productsArray))
+      });
+  }, []);
 
   return (
     <>
-      <Header cartQuantity={cartQuantity}/>
+      <Header/>
 
-      <Catalog title={'Potions'} products={products} addToCart={handleIncreaseCartQuantity}/>
+      <Catalog title={'Potions'} />
 
       <Footer />
     </>
