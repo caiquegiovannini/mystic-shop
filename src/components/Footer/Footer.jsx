@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebookSquare, FaTwitterSquare, FaPinterestSquare, FaTumblrSquare, FaGooglePlusSquare } from 'react-icons/fa';
 
 import './Footer.css';
@@ -28,29 +29,29 @@ const Footer = () => {
       </section>
     
       <section className="footer__useful">
-        <a className="useful__link" href="#">Company</a>
-        <a className="useful__link" href="#">Contact us</a>
-        <a className="useful__link" href="#">Shipping</a>
-        <a className="useful__link" href="#">Returns</a>
-        <a className="useful__link" href="#">Careers</a>
+        <Link to="/" className="useful__link">Company</Link>
+        <Link to="/"  className="useful__link">Contact us</Link>
+        <Link to="/" className="useful__link">Shipping</Link>
+        <Link to="/" className="useful__link">Returns</Link>
+        <Link to="/" className="useful__link">Careers</Link>
       </section>
       
       <section className="footer__social">
-        <a className="social__link" href="#">
+        <Link to="/" className="social__link">
           <FaFacebookSquare />
-        </a>
-        <a className="social__link" href="#">
+        </Link>
+        <Link to="/" className="social__link">
           <FaTwitterSquare />
-        </a>
-        <a className="social__link" href="#">
+        </Link>
+        <Link to="/" className="social__link">
           <FaPinterestSquare />
-        </a>
-        <a className="social__link" href="#">
+        </Link>
+        <Link to="/" className="social__link">
           <FaTumblrSquare />
-        </a>
-        <a className="social__link" href="#">
+        </Link>
+        <Link to="/" className="social__link">
           <FaGooglePlusSquare />
-        </a>
+        </Link>
       </section>
 
       <section className="footer__copyright">

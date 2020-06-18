@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FiMenu, FiShoppingCart } from 'react-icons/fi';
 
@@ -10,10 +11,6 @@ import Search from '../Search/Search';
 const Header = () => {
   const { items } = useSelector(state => state.cart);
   const [menu, setMenu] = useState(false);
-  const [off, setOff] = useState({
-    name: 'Free shipping', 
-    condition: 'on orders over $50',
-  });
 
   const handleMenu = () => {
     setMenu(!menu);
@@ -30,14 +27,14 @@ const Header = () => {
           <FiMenu />
         </button>
 
-        <div className="header__logo">
+        <Link to="/" className="header__logo">
           <h1 className="header__logo__title">
             Merlin's <span className="header__logo__title header__logo__title--normal">
               Potions
             </span>
           </h1>
           <h2 className="header__logo__subtitle">fine potions since 1026</h2>
-        </div>
+        </Link>
 
         <div className="search-field">
           <Search />
@@ -47,9 +44,9 @@ const Header = () => {
         <div className="header__cart">
           <div className="header__off header__off--desktop">
             <p className="off__description">
-              {off.name}
+              Free shipping
               <span className="off__condition">
-                {off.condition}
+                on orders over $50
               </span>
             </p>
           </div>
@@ -64,7 +61,7 @@ const Header = () => {
 
       <div className="header__off header__off--mobile">
         <p className="off__description">
-          {`${off.name} ${off.condition}`}
+          Free shipping on orders over $50
         </p>
       </div>
     
