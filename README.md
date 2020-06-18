@@ -6,6 +6,8 @@
   <img src="src/assets/screenshots/demo.gif" alt="demo gif"/>
 </div>
 
+---
+
 ## :computer: Built With
 - [ReactJS](https://pt-br.reactjs.org/)
 - [Redux](https://redux.js.org/)
