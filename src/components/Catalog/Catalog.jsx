@@ -7,7 +7,7 @@ import Product from '../Product/Product';
 import Lightbox from '../Lightbox/Lightbox';
 
 const Catalog = ({ title }) => {
-  const { products } = useSelector(state => state.products);
+  const { products, searchedProducts } = useSelector(state => state.products);
   const { lightboxProduct, lightbox } = useSelector(state => state.lightbox);
 
   return (
@@ -15,7 +15,10 @@ const Catalog = ({ title }) => {
       <h2 className="catalog__title">{title}</h2>
 
       <section className="catalog__cards">
-        {products && products.map(product => (<Product key={product.id} product={product}/>))}
+        {searchedProducts.length > 0
+          ? searchedProducts.map(product => (<Product key={product.id} product={product}/>))
+          : products.map(product => (<Product key={product.id} product={product}/>))
+        }
       </section>
 
       {lightbox && <Lightbox product={lightboxProduct}/>}
