@@ -3,7 +3,7 @@
 <p align="center">Frontend project built with react</p>
 
 <div align="center">
-  <img src="" />
+  <img src="src/assets/screenshots/demo.gif" alt="demo gif"/>
 </div>
 
 ## :computer: Built With
